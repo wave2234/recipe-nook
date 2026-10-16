@@ -272,8 +272,24 @@ window.foodNookSend = async function (text) {
 
 ---
 
+## 数据来源与致谢
+
+菜谱、热量和图片全部来自公开数据。本仓库只放代码，不附带任何数据：
+
+- **程序员做饭指南 HowToCook**（[Anduin2017/HowToCook](https://github.com/Anduin2017/HowToCook)，The Unlicense）：几百道家常菜的做法、成品图和步骤图。
+- **下厨房食谱语料 XiaChuFang Recipe Corpus**：论文 Xiao Liu 等，*Counterfactual Recipe Generation: Exploring Compositional Generalization in a Realistic Scenario*（EMNLP 2022）公开的数据（[仓库](https://github.com/xxxiaol/counterfactual-recipe-generation)）。菜谱原作者是下厨房的用户，页面上会显示作者名。数据集没有声明许可，这里只提供挑选脚本，请自己下载，只做个人、非商业使用。
+- **食物成分表**：npm 包 [cn-food-mcp](https://www.npmjs.com/package/cn-food-mcp)（MIT）自带的 1725 种食物、每 100 克的营养数据。只用了它的数据文件，没有用它的代码。
+- **菜的图片**：[中文维基百科](https://zh.wikipedia.org/)词条首图，通过 MediaWiki API 按需获取。版权归各自作者，多为 CC BY-SA，页面上标了来源。
+- **每日目标公式**：Mifflin MD, St Jeor ST 等，*A new predictive equation for resting energy expenditure in healthy individuals*，Am J Clin Nutr，1990。
+
+另外两处参考：「先选哪一餐，再往里加菜」的记法参考了薄荷健康 App 的交互习惯，只参考了交互，没有用它的数据或代码；热量估算按《中国食物成分表》的口径。
+
+## 关于原创
+
+代码是从零写的，没有用其他 AI 菜谱项目的代码。拿 HowToCook 做 AI 菜谱的项目网上还有好几个，比如让 AI 推荐菜、排一周菜单的 MCP 服务 [HowToCook-mcp](https://github.com/worryzyy/HowToCook-mcp)，大家用的是同一份好数据，点子相近很正常。这个仓库是一个带页面的小应用：菜谱库、转盘、按餐记饭、热量和 AI 打分都在一起，可以单独用，也可以接进自己的聊天站。
+
 ## 许可
 
-代码 MIT。数据各按各的来源：HowToCook 公有领域；cn-food-mcp MIT；下厨房语料未声明许可（本仓库不附带，请只做个人非商业使用）；维基图片各自的许可，页面上保留了来源标注。
+代码 MIT。数据各按各的来源，见上面「数据来源与致谢」。
 
 由 Claude（lint）写，最早是自建 AI 聊天站「猫窝」里的一个子页面。
